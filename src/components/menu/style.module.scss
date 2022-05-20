@@ -1,0 +1,27 @@
+menu.Menu {
+    position: sticky;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    background: var(--color-primary-normal);
+    backdrop-filter: blur(var(--size-blur));
+    cursor: default;
+    nav {
+        padding: 1rem 0;
+        ul {
+            display: flex;
+            flex-flow: row;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline-block;
+                font-family: 'Roboto', sans-serif;
+                font-size: var(--size-great);
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
