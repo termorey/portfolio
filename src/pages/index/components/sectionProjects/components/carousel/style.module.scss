@@ -1,0 +1,61 @@
+div.carousel {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+
+    .item {
+        $size: inherit;
+        position: relative;
+        height: $size;
+        width: $size;
+        min-width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .image {
+            position: relative;
+            height: $size;
+            min-width: $size;
+            background-position: center;
+            background-size: cover;
+        }
+        .controls {
+            $color: var(--color-light);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-flow: nowrap;
+            justify-content: center;
+            gap: var(--size-normal) var(--size-hard);
+            background: linear-gradient(0deg, var(--color-second-hard) 35%, transparent 50%) 0 0 / 100% 200%;
+            padding: var(--size-hard);
+            color: $color;
+            opacity: 0;
+            transition: var(--transition-time);
+
+            svg {
+                fill: $color;
+            }
+        }
+        &:hover {
+            .controls {
+                background-position: 0 100%;
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+@import "src/style/variables";
+
+.slide {
+    height: 70%;
+    width: 80%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: var(--size-titan);
+
+    div.slider {
+        flex: 0 0 40%;
+        height: 80%;
+        width: 100%;
+    }
+    div.information {
+        flex: 1 0;
+        max-height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        background: var(--color-second-normal);
+        padding: var(--size-great);
+        font-family: 'Roboto', sans-serif;
+        box-shadow: var(--box-shadow-empty);
+        transition: var(--transition-time);
+        transform: perspective(600px) rotateY(-5deg);
+        cursor: default;
+
+        &:hover {
+            background: var(--color-second-hard);
+            box-shadow: var(--box-shadow-normal);
+            transform: perspective(600px) rotateY(0);
+        }
+
+        >.title {
+            flex: 0;
+            font-size: var(--font-size-h2);
+            font-weight: bold;
+            text-align: center;
+        }
+        >.body {
+            flex: 1 1;
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
+            align-items: stretch;
+            padding-right: var(--size-great);
+            font-size: var(--font-size-text);
+            overflow-y: auto;
+        }
+    }
+
+    @media screen and (max-width: #{map-get($SCREEN, "lg")}px) {
+        flex-flow: column;
+
+        div.slider {
+            height: 100%;
+            width: 100%;
+        }
+        div.information {
+            height: 50%;
+            background: var(--color-second-hard);
+            transform: perspective(600px) rotateY(0);
+        }
+    }
+    @media screen and (max-width: #{map-get($SCREEN, "md")}px) {
+        width: 95% !important;
+    }
+}

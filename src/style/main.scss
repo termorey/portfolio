@@ -31,6 +31,10 @@ $body-bg: transparent;
     $transition-time: .3;
     --transition-time: #{$transition-time}s;
 
+    /* Font */
+    --font-size-h2: 1.25rem;
+    --font-size-text: 1rem;
+
     /* Other */
     --padding: var(--size-hard);
     --border-radius: var(--size-border);
@@ -103,6 +107,29 @@ html {
         }
         .backdropBlur {
             backdrop-filter: blur(var(--size-blur));
+        }
+
+        .btn {
+            position: relative;
+            display: inline-flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: var(--size-great);
+            background: transparent;
+            padding: var(--size-normal) var(--size-great);
+            border-radius: var(--border-radius);
+            outline: none;
+            border: none;
+            font-family: AllodsWest, sans-serif;
+            font-weight: normal;
+            text-decoration: none;
+            cursor: pointer;
+            user-select: none;
+
+            .light {
+                border: var(--size-light) solid var(--color-light);
+            }
         }
     }
 }

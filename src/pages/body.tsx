@@ -7,11 +7,9 @@ const Body = () => {
     return (
         <>
             <Menu/>
-            <main>
-                <Routes>
-                    <Route path={"*"} element={<Index/>}/>
-                </Routes>
-            </main>
+            <Routes>
+                <Route path={"*"} element={<Index/>}/>
+            </Routes>
         </>
     );
 }
