@@ -2,6 +2,7 @@ import React from "react";
 import localStyle from "./style.module.scss"
 import {Col, Container, Row} from "react-bootstrap";
 import {multiClass} from "../../utils/utils";
+import {Link} from "react-router-dom";
 
 const Menu = () => {
     return (
@@ -11,9 +12,9 @@ const Menu = () => {
                     <Col>
                         <nav>
                             <ul>
-                                <li>Главная</li>
+                                <li><Link to={"/"}>Главная</Link></li>
                                 {/*<li>Обо мне</li>*/}
-                                {/*<li>Контакты</li>*/}
+                                <li><Link to={"contacts"}>Контакты</Link></li>
                             </ul>
                         </nav>
                     </Col>

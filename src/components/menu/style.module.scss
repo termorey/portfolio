@@ -22,6 +22,10 @@ menu.Menu {
                 font-size: var(--size-great);
                 font-weight: 600;
                 text-transform: uppercase;
+                a {
+                    color: var(--color-light);
+                    text-decoration: none;
+                }
             }
         }
     }
