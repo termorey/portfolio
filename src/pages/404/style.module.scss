@@ -1,0 +1,18 @@
+main.notFoundPage {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div.notFoundBlock {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: var(--color-dark-hard);
+    cursor: default;
+}
