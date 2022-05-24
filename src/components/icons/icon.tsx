@@ -1,8 +1,12 @@
 import React from "react";
-import Link from "./list/link";
+import LinkIcon from "./list/linkIcon";
+import GithubIcon from "./list/github";
+import VkIcon from "./list/vk";
 
 const Icon = {
-    link: Link
+    link: LinkIcon,
+    github: GithubIcon,
+    vk: VkIcon
 }
 
 export default Icon;
