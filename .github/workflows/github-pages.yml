@@ -1,0 +1,27 @@
+name: Github Pages Deploy
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - name: Checkout
+        uses: action/checkout
+
+      - name: Install and build
+        run: npm install && npm run build
+
+      - name: Deploy
+        uses: termorey/portfolio
+        with:
+          branch: build
+          folder: build
