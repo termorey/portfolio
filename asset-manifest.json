@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.612bdb4b.css",
-    "main.js": "/portfolio/static/js/main.753962f3.js",
+    "main.js": "/portfolio/static/js/main.71a10f28.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/background_01.jpg": "/portfolio/static/media/background_01.d9d54a8d23cd6a14558f.jpg",
-    "static/media/frontReact.md": "/portfolio/static/media/frontReact.21bdcc14e2107d9ce8f5.md",
-    "static/media/frontPHP.md": "/portfolio/static/media/frontPHP.a72248abd950aa84d486.md",
+    "static/media/frontReact.md": "/portfolio/static/media/frontReact.d3f230e293b3dcaa94c7.md",
+    "static/media/frontPHP.md": "/portfolio/static/media/frontPHP.3784e42db5261baa845b.md",
     "static/media/alloderRu.md": "/portfolio/static/media/alloderRu.bfbb6f59a0184eeaf224.md",
-    "static/media/events.md": "/portfolio/static/media/events.e5c537e0796be24447d0.md",
-    "static/media/youtubeHelper.md": "/portfolio/static/media/youtubeHelper.b64ffe063ebd5916b1d8.md",
+    "static/media/events.md": "/portfolio/static/media/events.8f6bb9f3db9676558351.md",
+    "static/media/youtubeHelper.md": "/portfolio/static/media/youtubeHelper.e0942ca773532696f525.md",
     "index.html": "/portfolio/index.html",
     "main.612bdb4b.css.map": "/portfolio/static/css/main.612bdb4b.css.map",
-    "main.753962f3.js.map": "/portfolio/static/js/main.753962f3.js.map",
+    "main.71a10f28.js.map": "/portfolio/static/js/main.71a10f28.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.612bdb4b.css",
-    "static/js/main.753962f3.js"
+    "static/js/main.71a10f28.js"
   ]
 }
