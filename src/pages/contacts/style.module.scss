@@ -1,0 +1,29 @@
+@import "src/style/variables";
+
+.contactsPage {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    div.contactsBlock {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--size-titan);
+        background: var(--color-primary-hard);
+
+        div.list {
+            display: flex;
+            flex-flow: row;
+            gap: var(--size-titan);
+            cursor: default;
+
+            @media screen and (max-width: #{map-get($SCREEN,"md")}px) {
+                flex-flow: column;
+                gap: var(--size-great);
+            }
+        }
+    }
+}
