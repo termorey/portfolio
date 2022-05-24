@@ -49,6 +49,15 @@
             padding-right: var(--size-great);
             font-size: var(--font-size-text);
             overflow-y: auto;
+
+            blockquote {
+                padding-left: 1rem;
+                border-left: .25rem solid var(--color-primary);
+            }
+            p {
+                padding: 0;
+                margin: 0;
+            }
         }
     }
 
