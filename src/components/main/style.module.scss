@@ -1,0 +1,5 @@
+main.main {
+    &:global(fullscreen), &.fullscreen {
+        min-height: 100vh;
+    }
+}
