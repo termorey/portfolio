@@ -12,4 +12,6 @@
 
 ### Ссылки
 > [Git репозиторий примера функционала](https://github.com/termorey/event "Git репозиторий примера функционала")
+> [Рабочая страница примера](https://termorey.github.io/event/ "Рабочая страница примера")
 > [Git репозиторий конкурса KeyRan](https://github.com/termorey/keyranEvent "Git репозиторий конкурса KeyRan")
+> [Рабочая страница конкурса](https://termorey.github.io/keyranEvent/ "Рабочая страница конкурса")
