@@ -36,7 +36,7 @@ const Carousel = ({data, style, className} : PropsType) => {
         >
             {data.map(image =>
                 <div className={localStyle.item} key={image}>
-                    <div className={localStyle.image} style={{backgroundImage: `url("${image}")`}}/>
+                    <div className={localStyle.image} style={{backgroundImage: `url("${process.env.PUBLIC_URL}${image}")`}}/>
                     <div className={localStyle.controls}>
                         <a href={image} target={"_blank"} className={"btn light"}
                            title={"Открыть в новой вкладке"}

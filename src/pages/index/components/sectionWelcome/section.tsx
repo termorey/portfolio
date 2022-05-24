@@ -32,7 +32,7 @@ const SectionWelcome = () => {
                               set(calc(e.clientX, e.clientY, 1.05))
                           }}
             >
-                <animated.img className={style.logo} src={"/style/images/logo.png"}
+                <animated.img className={style.logo} src={`${process.env.PUBLIC_URL}/style/images/logo.png`}
                      alt={"logo"}
                      draggable={"false"}
                      style={{
