@@ -9,6 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    concurrency: ci-${{github.ref}}
+
     strategy:
       matrix:
         node-version: [16.x]
@@ -25,5 +27,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Build
+        run: npm predeploy
+
       - name: Deploy
-        run: npm run deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+          with:
+            folder: build
+            branch: build
