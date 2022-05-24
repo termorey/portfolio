@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Montserrat&family=Roboto:wght@100&display=swap');
+@import "variables";
+@import "mixins";
+$body-bg: transparent;
+@import "~bootstrap/scss/bootstrap";
+
+:root {
+    /* Colors */
+    @mixin createColorsFromVariables () {
+        @each $name, $value in $COLORS {
+            @include createColor($name, map-get($value, "r"), map-get($value, "g"), map-get($value, "b"))
+        }
+    }
+    @include createColorsFromVariables();
+
+    /* Sizes */
+    @mixin createsSizesFromVariables () {
+        @each $name, $value in $SIZE {
+            --size-#{$name}: #{$value};
+        }
+    }
+    @include createsSizesFromVariables();
+
+    /* Shadows */
+    $shadows-color: --color-dark;
+    --box-shadow-empty: 0 var(--size-light) var(--size-normal) var(#{$shadows-color}-empty);
+    --box-shadow-light: 0 var(--size-light) var(--size-normal) var(#{$shadows-color}-light);
+    --box-shadow-normal: 0 var(--size-light) var(--size-normal) var(#{$shadows-color}-normal);
+
+    /* Transition */
+    $transition-time: .3;
+    --transition-time: #{$transition-time}s;
+
+    /* Font */
+    --font-size-h2: 1.25rem;
+    --font-size-text: 1rem;
+
+    /* Other */
+    --padding: var(--size-hard);
+    --border-radius: var(--size-border);
+}
+
+html, body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+html {
+    background: var(--color-second-full);
+
+    *::-webkit-scrollbar {
+        min-width: 5px;
+        width: 0.5%;
+        max-width: 50px;
+        min-height: 5px;
+        height: 0.5%;
+        max-height: 50px;
+    }
+    *::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    *::-webkit-scrollbar-track-piece {
+        background-color: transparent;
+    }
+    *::-webkit-scrollbar-thumb {
+        height: 3%;
+        background-color: #666;
+        border-radius: 0.25rem;
+    }
+    *:hover::-webkit-scrollbar-thumb {
+        background-color: #999;
+    }
+    *::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+    *::-webkit-resizer {
+        background-color: #666;
+    }
+
+    body {
+        background: url("../style/background/background_01.jpg") no-repeat fixed center/cover;
+        color: var(--color-light);
+
+        main {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+
+        .blockContainer {
+            @mixin createGaps() {
+                width: 100%;
+                @each $name, $value in $SCREEN {
+                    @media screen and (min-width: #{$value}px) {
+                        width: 70%;
+                        max-width: #{$value}px;
+                    }
+                }
+            }
+            @include createGaps();
+        }
+        .padding {
+            padding: var(--padding);
+        }
+        .bordered {
+            border-radius: var(--border-radius);
+        }
+        .backdropBlur {
+            backdrop-filter: blur(var(--size-blur));
+        }
+
+        .btn {
+            position: relative;
+            display: inline-flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: var(--size-great);
+            background: transparent;
+            padding: var(--size-normal) var(--size-great);
+            border-radius: var(--border-radius);
+            outline: none;
+            border: none;
+            font-family: AllodsWest, sans-serif;
+            font-weight: normal;
+            text-decoration: none;
+            cursor: pointer;
+            user-select: none;
+
+            .light {
+                border: var(--size-light) solid var(--color-light);
+            }
+        }
+    }
+}
