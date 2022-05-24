@@ -26,4 +26,9 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run deploy
+        run: npm run build
+
+      - name: Deploy
+        uses: termorey/portfolio@build
+        with:
+          folder: build
