@@ -1,9 +1,0 @@
-@import "variables";
-
-/* COLORS */
-@mixin createColor($name, $r, $g, $b) {
-    --color-#{$name}: rgb(#{$r},#{$g},#{$b});
-    @each $type, $value in $OPACITY {
-        --color-#{$name}-#{$type}: rgba(#{$r},#{$g},#{$b},#{$value});
-    }
-}
